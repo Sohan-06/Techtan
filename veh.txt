@@ -1,0 +1,29 @@
+#include<stdio.h>
+void main()
+{
+    int v,w,low,high,mid;
+    printf("enter no of vehicle\n");
+    scanf("%d",&v);
+    printf("enter no of wheel\n");
+    scanf("%d",&w);
+    mid=v/2;
+    high=mid;
+    low=mid;
+    while(2<=w && w%2==0 && v<w)
+    {
+        if((low*4)+(high*2)==w)
+        {
+            printf("FW=%d\nLW=%d\n",low,high);
+        }
+        else if((low*4)+(high*2)<w)
+        {
+            low++;
+            high--;
+        }
+        else
+        {
+            low--;
+            high++;
+        }
+    }    
+}
