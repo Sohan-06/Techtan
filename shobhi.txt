@@ -1,0 +1,42 @@
+#include<stdio.h>
+void main()
+{
+    double bill,disc,res;
+    printf("enter the bill amount\n");
+    scanf("%lf",&bill);
+    if(bill<5000)
+    {
+        disc=0;
+        res=bill-disc;
+    }
+    else if(bill>=5000 && bill<=10000)
+    {
+        disc=(bill*10)/100;
+        res=bill-disc;
+       
+        
+    }
+    else if(bill>=10001 && bill<=50000)
+    {
+        disc=(bill*20)/100;
+        res=bill-disc;
+       
+    }
+    else if(bill>=50001 && bill<=100000)
+    {
+        disc=(bill*30)/100;
+        res=bill-disc;
+       
+    }
+    else
+    {
+        disc=(bill*40)/100;
+        res=bill-disc;
+        
+    }
+        printf("Bill Amount:%lf\n",bill);
+        printf("Discount(-):%lf\n",disc);
+        printf("            *********\n");
+        printf("            %lf\n",res);
+        printf("            *********\n");
+}        
